@@ -56,9 +56,9 @@ public class ToolController {
     return toolService.update(tool);
     }
     
-        @DeleteMapping("/(id)")
+        @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id")int gamaId){
-    return toolService.deleteTool(gamaId);
+    public boolean delete(@PathVariable("id")int toolId){
+    return toolService.deleteTool(toolId);
     }
 }
